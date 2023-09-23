@@ -4,6 +4,7 @@
 import { useState } from 'react'
 import './App.css'
 import ComponentClass from './ComponentClass'
+import ComponentFunction from './ComponentFunction'
 
 function App() {
 
@@ -16,7 +17,7 @@ function App() {
 
   return (
     <>
-      { isCompVisible && <ComponentClass /> }
+      { isCompVisible ? <ComponentClass /> : <ComponentFunction /> }
       <button onClick={handleToggleComponent}>Toggle Component</button>
     </>
   )
